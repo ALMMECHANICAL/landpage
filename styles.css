@@ -5,52 +5,87 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #f4f4f4; /* Light Grey Text for better contrast */
+    background: linear-gradient(to right, #232526, #414345); /* Dark Gradient Background */
+}
+
+.hero, .services, .contact, .footer {
+    background: rgba(44, 44, 44, 0.4); /* Translucent Background */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px 20px;
+    margin: 20px auto;
+    border: 1px solid rgba(50, 205, 50, 0.3); /* Translucent Lime Green Border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 1200px;
 }
 
 .hero {
-    background: #007BFF;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
+    color: #32CD32; /* Bright Lime Green Text */
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 .hero .cta-button {
     display: inline-block;
     margin-top: 20px;
-    padding: 10px 20px;
-    background: #FFC107;
-    color: black;
+    padding: 12px 25px;
+    background: #32CD32; /* Lime Green Background */
+    color: #1a1a1a; /* Dark Grey Text */
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
     font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .hero .cta-button:hover {
-    background: #E0A800;
+    background: #28a728; /* Darker Lime Green on Hover */
+    transform: translateY(-2px);
 }
 
-.services {
-    padding: 40px 20px;
-    background: #f4f4f4;
-    text-align: center;
+.services h2, .contact h2 {
+    color: #32CD32; /* Lime Green Headings */
+    margin-bottom: 20px;
+    font-size: 2.5em;
 }
 
 .service-item {
     margin: 20px 0;
+    padding: 20px;
+    background: rgba(26, 26, 26, 0.5); /* Darker Translucent Background */
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(50, 205, 50, 0.3); /* Translucent Lime Green Border */
+    color: #f4f4f4; /* Light Grey Text for readability */
 }
 
-.contact {
-    padding: 40px 20px;
-    text-align: center;
-    background: #e9ecef;
+.service-item h3 {
+    color: #32CD32; /* Lime Green Subheadings */
+    margin-bottom: 10px;
+}
+
+.contact p {
+    color: #f4f4f4;
 }
 
 .contact a {
-    color: #007BFF;
+    color: #32CD32; /* Lime Green Links */
     text-decoration: none;
+    font-weight: bold;
 }
 
 .contact a:hover {
@@ -58,8 +93,7 @@ body {
 }
 
 .footer {
+    color: #f4f4f4;
     padding: 20px;
-    text-align: center;
-    background: #343a40;
-    color: white;
+    margin-top: 40px;
 }
