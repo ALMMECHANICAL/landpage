@@ -3,56 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALM Media and Entertainment</title>
+    <title>ALM Media and Entertainment | Digital Innovation & Content Solutions</title>
+    <meta name="description" content="Leading digital content and software solutions provider specializing in YouTube content, Android games, AI agents, and SaaS systems.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="hero" role="banner">
-        <div class="container">
-            <h1>Welcome to ALM Media and Entertainment</h1>
-            <p>Pioneering the future of digital content and software solutions.</p>
-            <nav>
-                <a href="#contact" class="cta-button">Get in Touch</a>
-            </nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-text">ALM</span>
+                <span class="logo-subtitle">Media & Entertainment</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero" role="banner">
+        <div class="hero-background"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-subtitle">Welcome to</span>
+                    ALM Media and Entertainment
+                </h1>
+                <p class="hero-description">Pioneering the future of digital content and innovative software solutions. We transform ideas into exceptional digital experiences.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Explore Services</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+            </div>
         </div>
     </header>
 
     <main role="main">
+        <!-- Services Section -->
         <section id="services" class="services">
             <div class="container">
-                <h2>Our Services</h2>
-                <div class="service-item">
-                    <h3>YouTube Content Creation</h3>
-                    <p>Crafting engaging and high-quality content for the world's largest video platform.</p>
+                <div class="section-header">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-description">Comprehensive digital solutions tailored to elevate your business</p>
                 </div>
-                <div class="service-item">
-                    <h3>Android Game Development</h3>
-                    <p>Building fun, innovative, and addictive games for the Android ecosystem.</p>
-                </div>
-                <div class="service-item">
-                    <h3>AI Agents</h3>
-                    <p>Developing intelligent agents to automate tasks and solve complex problems.</p>
-                </div>
-                <div class="service-item">
-                    <h3>SaaS Software Systems</h3>
-                    <p>Creating scalable and robust Software as a Service solutions for businesses of all sizes.</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">YouTube Content Creation</h3>
+                        <p class="service-description">Crafting engaging, high-quality content that captivates audiences on the world's largest video platform.</p>
+                        <ul class="service-features">
+                            <li>Video Production</li>
+                            <li>Content Strategy</li>
+                            <li>Audience Growth</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Android Game Development</h3>
+                        <p class="service-description">Building fun, innovative, and addictive games that deliver exceptional experiences on the Android ecosystem.</p>
+                        <ul class="service-features">
+                            <li>Custom Game Design</li>
+                            <li>Unity & Native Development</li>
+                            <li>Monetization Strategy</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                                <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                                <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">AI Agents</h3>
+                        <p class="service-description">Developing intelligent agents that automate tasks, enhance productivity, and solve complex problems.</p>
+                        <ul class="service-features">
+                            <li>Machine Learning Models</li>
+                            <li>Process Automation</li>
+                            <li>Intelligent Analytics</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">SaaS Software Systems</h3>
+                        <p class="service-description">Creating scalable, robust Software as a Service solutions designed for businesses of all sizes.</p>
+                        <ul class="service-features">
+                            <li>Cloud Architecture</li>
+                            <li>Scalable Infrastructure</li>
+                            <li>Security & Compliance</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">Why Choose ALM?</h2>
+                        <p>We combine creativity with cutting-edge technology to deliver solutions that drive real results. Our team of experts is dedicated to understanding your unique needs and crafting tailored solutions that exceed expectations.</p>
+                        <div class="about-features">
+                            <div class="about-feature">
+                                <div class="feature-icon">✓</div>
+                                <div>
+                                    <h4>Expert Team</h4>
+                                    <p>Experienced professionals across all domains</p>
+                                </div>
+                            </div>
+                            <div class="about-feature">
+                                <div class="feature-icon">✓</div>
+                                <div>
+                                    <h4>Quality Focused</h4>
+                                    <p>Delivering excellence in every project</p>
+                                </div>
+                            </div>
+                            <div class="about-feature">
+                                <div class="feature-icon">✓</div>
+                                <div>
+                                    <h4>Client-Centric</h4>
+                                    <p>Your success is our priority</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="container">
-                <h2>Contact Us</h2>
-                <p>Email: <a href="mailto:info@almmedia.dev">info@almmedia.dev</a></p>
-                <p>Let's create something amazing together!</p>
+                <div class="section-header">
+                    <h2 class="section-title">Let's Work Together</h2>
+                    <p class="section-description">Ready to bring your vision to life? Get in touch with us today.</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <a href="mailto:info@almmedia.dev">info@almmedia.dev</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Response Time</h4>
+                                <p>Within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-cta">
+                        <p class="contact-tagline">Let's create something amazing together!</p>
+                        <a href="mailto:info@almmedia.dev" class="btn btn-primary btn-large">Start Your Project</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>© 2025 ALM Media and Entertainment. All rights reserved.</p>
+        <div class="container footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-text">ALM</span>
+                        <span class="logo-subtitle">Media & Entertainment</span>
+                    </div>
+                    <p>Transforming digital experiences through innovation and creativity.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">YouTube Content</a></li>
+                            <li><a href="#services">Game Development</a></li>
+                            <li><a href="#services">AI Agents</a></li>
+                            <li><a href="#services">SaaS Solutions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ALM Media and Entertainment. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .stat-item, .about-feature').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
