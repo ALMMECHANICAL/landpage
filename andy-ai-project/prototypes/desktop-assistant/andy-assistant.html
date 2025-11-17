@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy AI - Desktop Assistant Prototype</title>
+    <link rel="stylesheet" href="andy-assistant.css">
+</head>
+<body>
+    <!-- Desktop Assistant Window -->
+    <div class="andy-window">
+        <!-- Window Header -->
+        <div class="andy-header">
+            <div class="andy-logo">
+                <div class="andy-avatar">AI</div>
+                <span class="andy-title">Andy AI</span>
+            </div>
+            <div class="andy-controls">
+                <button class="control-btn minimize" title="Minimize">_</button>
+                <button class="control-btn maximize" title="Maximize">□</button>
+                <button class="control-btn close" title="Close">×</button>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="andy-tabs">
+            <button class="tab-btn active" data-tab="chat">
+                <span class="tab-icon">💬</span>
+                <span class="tab-label">Chat</span>
+            </button>
+            <button class="tab-btn" data-tab="email">
+                <span class="tab-icon">✉️</span>
+                <span class="tab-label">Email</span>
+                <span class="badge">5</span>
+            </button>
+            <button class="tab-btn" data-tab="calendar">
+                <span class="tab-icon">📅</span>
+                <span class="tab-label">Calendar</span>
+            </button>
+            <button class="tab-btn" data-tab="tasks">
+                <span class="tab-icon">✅</span>
+                <span class="tab-label">Tasks</span>
+                <span class="badge">3</span>
+            </button>
+            <button class="tab-btn" data-tab="notes">
+                <span class="tab-icon">📝</span>
+                <span class="tab-label">Notes</span>
+            </button>
+            <button class="tab-btn settings-tab" data-tab="settings">
+                <span class="tab-icon">⚙️</span>
+            </button>
+        </div>
+
+        <!-- Tab Content Area -->
+        <div class="andy-content">
+            <!-- Chat Tab -->
+            <div class="tab-content active" id="chat-tab">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message assistant">
+                            <div class="message-avatar">AI</div>
+                            <div class="message-content">
+                                <p>Hello! I'm Andy, your AI assistant. How can I help you today?</p>
+                                <p class="message-time">Just now</p>
+                            </div>
+                        </div>
+                        <div class="message user">
+                            <div class="message-content">
+                                <p>Show me my emails from today</p>
+                                <p class="message-time">Just now</p>
+                            </div>
+                            <div class="message-avatar user-avatar">You</div>
+                        </div>
+                        <div class="message assistant">
+                            <div class="message-avatar">AI</div>
+                            <div class="message-content">
+                                <p>You have 5 unread emails from today:</p>
+                                <ul>
+                                    <li><strong>Project Update</strong> - from Sarah (High Priority)</li>
+                                    <li><strong>Meeting Reminder</strong> - from Calendar</li>
+                                    <li><strong>Newsletter</strong> - from TechNews (Low Priority)</li>
+                                    <li><strong>Invoice #1234</strong> - from Accounting</li>
+                                    <li><strong>Team Lunch</strong> - from Mike</li>
+                                </ul>
+                                <p>Would you like me to summarize any of these?</p>
+                                <p class="message-time">Just now</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <div class="quick-actions">
+                            <button class="quick-action" title="Voice Input">🎤</button>
+                            <button class="quick-action" title="Attach File">📎</button>
+                            <button class="quick-action" title="Screenshot">📸</button>
+                        </div>
+                        <div class="input-wrapper">
+                            <input
+                                type="text"
+                                class="chat-input"
+                                id="chatInput"
+                                placeholder="Ask Andy anything..."
+                            />
+                            <button class="send-btn" id="sendBtn">
+                                <span>➤</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Tab -->
+            <div class="tab-content" id="email-tab">
+                <div class="email-container">
+                    <div class="email-header">
+                        <h3>Inbox</h3>
+                        <button class="refresh-btn">↻ Refresh</button>
+                    </div>
+                    <div class="email-list">
+                        <div class="email-item unread priority-high">
+                            <div class="email-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="email-details">
+                                <div class="email-from">Sarah Johnson</div>
+                                <div class="email-subject">Project Update - Q4 Deliverables</div>
+                                <div class="email-preview">Hi team, I wanted to share an update on our Q4 deliverables...</div>
+                                <div class="email-meta">
+                                    <span class="email-time">2 hours ago</span>
+                                    <span class="email-label priority">High Priority</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="email-item unread">
+                            <div class="email-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="email-details">
+                                <div class="email-from">Calendar Notification</div>
+                                <div class="email-subject">Meeting in 1 hour: Team Standup</div>
+                                <div class="email-preview">Your meeting "Team Standup" starts at 2:00 PM...</div>
+                                <div class="email-meta">
+                                    <span class="email-time">1 hour ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="email-item">
+                            <div class="email-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="email-details">
+                                <div class="email-from">Mike Chen</div>
+                                <div class="email-subject">Team Lunch this Friday?</div>
+                                <div class="email-preview">Hey everyone, want to grab lunch on Friday?</div>
+                                <div class="email-meta">
+                                    <span class="email-time">3 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calendar Tab -->
+            <div class="tab-content" id="calendar-tab">
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <h3>Today's Schedule</h3>
+                        <button class="add-event-btn">+ Add Event</button>
+                    </div>
+                    <div class="events-list">
+                        <div class="event-item">
+                            <div class="event-time">9:00 AM</div>
+                            <div class="event-details">
+                                <div class="event-title">Morning Standup</div>
+                                <div class="event-location">Zoom Meeting</div>
+                                <div class="event-duration">30 min</div>
+                            </div>
+                            <div class="event-status ongoing">Now</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-time">2:00 PM</div>
+                            <div class="event-details">
+                                <div class="event-title">Client Presentation</div>
+                                <div class="event-location">Conference Room B</div>
+                                <div class="event-duration">1 hour</div>
+                            </div>
+                            <div class="event-status upcoming">In 5 hours</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-time">4:30 PM</div>
+                            <div class="event-details">
+                                <div class="event-title">Code Review Session</div>
+                                <div class="event-location">Google Meet</div>
+                                <div class="event-duration">45 min</div>
+                            </div>
+                            <div class="event-status upcoming">In 7 hours</div>
+                        </div>
+                    </div>
+                    <div class="calendar-summary">
+                        <p>You have <strong>3 events</strong> today, <strong>5 events</strong> this week.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tasks Tab -->
+            <div class="tab-content" id="tasks-tab">
+                <div class="tasks-container">
+                    <div class="tasks-header">
+                        <h3>Your Tasks</h3>
+                        <button class="add-task-btn">+ Add Task</button>
+                    </div>
+                    <div class="task-section">
+                        <h4>Today</h4>
+                        <div class="task-item priority-high">
+                            <input type="checkbox" class="task-checkbox">
+                            <div class="task-content">
+                                <div class="task-title">Finish client presentation slides</div>
+                                <div class="task-meta">
+                                    <span class="task-due">Due: 1:00 PM</span>
+                                    <span class="task-priority high">High</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+                            <div class="task-content">
+                                <div class="task-title">Review Sarah's code PR #243</div>
+                                <div class="task-meta">
+                                    <span class="task-due">Due: 5:00 PM</span>
+                                    <span class="task-priority medium">Medium</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+                            <div class="task-content">
+                                <div class="task-title">Update documentation for API v2</div>
+                                <div class="task-meta">
+                                    <span class="task-due">Due: Today</span>
+                                    <span class="task-priority low">Low</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-section">
+                        <h4>Upcoming</h4>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+                            <div class="task-content">
+                                <div class="task-title">Prepare Q4 budget report</div>
+                                <div class="task-meta">
+                                    <span class="task-due">Due: Tomorrow</span>
+                                    <span class="task-priority medium">Medium</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notes Tab -->
+            <div class="tab-content" id="notes-tab">
+                <div class="notes-container">
+                    <div class="notes-sidebar">
+                        <button class="new-note-btn">+ New Note</button>
+                        <div class="notes-list">
+                            <div class="note-item active">
+                                <div class="note-title">Project Ideas</div>
+                                <div class="note-preview">Brainstorming session notes from...</div>
+                                <div class="note-date">Today</div>
+                            </div>
+                            <div class="note-item">
+                                <div class="note-title">Meeting Notes - Client Call</div>
+                                <div class="note-preview">Discussed requirements for new...</div>
+                                <div class="note-date">Yesterday</div>
+                            </div>
+                            <div class="note-item">
+                                <div class="note-title">Code Snippets</div>
+                                <div class="note-preview">Useful JavaScript functions...</div>
+                                <div class="note-date">2 days ago</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notes-editor">
+                        <input type="text" class="note-title-input" value="Project Ideas" />
+                        <textarea class="note-content-input" placeholder="Start typing...">
+# Brainstorming Session
+
+## App Ideas
+- Personal finance tracker with AI insights
+- Smart recipe organizer with meal planning
+- Collaborative whiteboard with real-time sync
+
+## Next Steps
+- Research market competitors
+- Create wireframes
+- Build MVP prototypes
+                        </textarea>
+                        <div class="note-actions">
+                            <button>Save</button>
+                            <button>Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Tab -->
+            <div class="tab-content" id="settings-tab">
+                <div class="settings-container">
+                    <h3>Settings</h3>
+
+                    <div class="settings-section">
+                        <h4>API Configuration</h4>
+                        <div class="setting-item">
+                            <label>OpenAI API Key</label>
+                            <input type="password" placeholder="sk-..." class="setting-input" />
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h4>Connected Accounts</h4>
+                        <div class="setting-item">
+                            <label>Email Accounts</label>
+                            <button class="connect-btn">Connect Gmail</button>
+                            <button class="connect-btn">Connect Outlook</button>
+                        </div>
+                        <div class="setting-item">
+                            <label>Calendar</label>
+                            <button class="connect-btn">Connect Google Calendar</button>
+                            <button class="connect-btn">Connect Outlook Calendar</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h4>Appearance</h4>
+                        <div class="setting-item">
+                            <label>Theme</label>
+                            <select class="setting-select">
+                                <option>Dark</option>
+                                <option>Light</option>
+                                <option>System</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label>Window Opacity</label>
+                            <input type="range" min="70" max="100" value="95" class="setting-slider" />
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h4>Notifications</h4>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" checked> Email notifications
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" checked> Calendar reminders
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox"> Task reminders
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h4>About</h4>
+                        <p>Andy AI Desktop Assistant v0.1.0 (Prototype)</p>
+                        <p>© 2025 ALM Media and Entertainment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="andy-statusbar">
+            <div class="status-left">
+                <span class="status-indicator online"></span>
+                <span class="status-text">Andy is ready</span>
+            </div>
+            <div class="status-right">
+                <span class="status-info">5 unread • 3 tasks • 3 events</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="andy-assistant.js"></script>
+</body>
+</html>
