@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALM Media and Entertainment | Digital Innovation & Content Solutions</title>
     <meta name="description" content="Leading digital content and software solutions provider specializing in YouTube content, Android games, AI agents, and SaaS systems.">
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="YouTube content creation, Android game development, AI agents, SaaS software, digital media, entertainment, software solutions">
+    <meta name="author" content="ALM Media and Entertainment">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://almmedia.dev/">
+    <meta property="og:title" content="ALM Media and Entertainment | Digital Innovation & Content Solutions">
+    <meta property="og:description" content="Pioneering the future of digital content and innovative software solutions">
+    <meta property="og:image" content="https://almmedia.dev/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://almmedia.dev/">
+    <meta property="twitter:title" content="ALM Media and Entertainment | Digital Innovation & Content Solutions">
+    <meta property="twitter:description" content="Pioneering the future of digital content and innovative software solutions">
+    <meta property="twitter:image" content="https://almmedia.dev/twitter-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,13 +41,20 @@
                 <span class="logo-text">ALM</span>
                 <span class="logo-subtitle">Media & Entertainment</span>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <a href="#contact" class="nav-cta">Get Started</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -140,6 +170,157 @@
             </div>
         </section>
 
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Portfolio</h2>
+                    <p class="section-description">Showcasing our recent projects and success stories</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Tech Review Channel</h3>
+                            <p>Built a successful YouTube channel from scratch, achieving 50K+ subscribers in 6 months with engaging tech content.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">YouTube</span>
+                                <span class="tag">Content Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Adventure Quest Mobile Game</h3>
+                            <p>Developed an addictive puzzle-adventure game with 100K+ downloads and 4.5-star rating on Google Play Store.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Android</span>
+                                <span class="tag">Unity</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>AI Customer Support Agent</h3>
+                            <p>Created an intelligent chatbot that reduced support tickets by 60% and improved response times by 80%.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">AI/ML</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Enterprise SaaS Platform</h3>
+                            <p>Built a scalable project management platform serving 500+ businesses with 99.9% uptime and robust features.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">SaaS</span>
+                                <span class="tag">Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <p class="section-description">Trusted by businesses and creators worldwide</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                        </div>
+                        <p class="testimonial-text">"ALM transformed our digital presence completely. Their YouTube content strategy helped us reach millions of viewers and establish our brand as an industry leader."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JD</div>
+                            <div>
+                                <div class="author-name">James Davidson</div>
+                                <div class="author-role">CEO, TechVision Media</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                        </div>
+                        <p class="testimonial-text">"The mobile game they developed exceeded all our expectations. The attention to detail and user experience is phenomenal. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SK</div>
+                            <div>
+                                <div class="author-name">Sarah Kim</div>
+                                <div class="author-role">Founder, PlayForward Studios</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                        </div>
+                        <p class="testimonial-text">"Their AI agent solution revolutionized our customer support. We've seen dramatic improvements in efficiency and customer satisfaction. Worth every penny!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MP</div>
+                            <div>
+                                <div class="author-name">Michael Porter</div>
+                                <div class="author-role">CTO, CloudScale Inc</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- About Section -->
         <section id="about" class="about">
             <div class="container">
@@ -228,6 +409,28 @@
                         <span class="logo-subtitle">Media & Entertainment</span>
                     </div>
                     <p>Transforming digital experiences through innovation and creativity.</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/almmedia" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/company/almmedia" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com/@almmedia" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/almmedia" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
@@ -243,6 +446,8 @@
                         <h4>Company</h4>
                         <ul>
                             <li><a href="#about">About Us</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
@@ -255,6 +460,39 @@
     </footer>
 
     <script>
+        // Page load animation
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-loaded');
+        });
+
+        // Mobile hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -293,8 +531,18 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.service-card, .stat-item, .about-feature').forEach(el => {
+        // Observe all animated elements
+        document.querySelectorAll('.service-card, .stat-item, .about-feature, .portfolio-card, .testimonial-card').forEach(el => {
             observer.observe(el);
+        });
+
+        // Add parallax effect to hero background
+        window.addEventListener('scroll', () => {
+            const heroBackground = document.querySelector('.hero-background');
+            if (heroBackground) {
+                const scrolled = window.pageYOffset;
+                heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
         });
     </script>
 </body>
