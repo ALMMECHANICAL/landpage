@@ -18,6 +18,51 @@ body {
     padding: 0 20px;
 }
 
+/* Navigation */
+.main-nav {
+    background: rgba(10, 10, 10, 0.95);
+    border-bottom: 1px solid rgba(50, 205, 50, 0.3);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.main-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-link {
+    color: #32CD32;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.back-link:hover {
+    color: #7FFF00;
+    transform: translateX(-5px);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #32CD32;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, rgba(50, 205, 50, 0.1) 0%, rgba(26, 26, 46, 0.8) 100%);
@@ -54,11 +99,20 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.5em;
+    font-size: 4em;
     font-weight: bold;
-    color: #32CD32;
-    text-transform: uppercase;
+    background: linear-gradient(135deg, #32CD32, #7FFF00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     letter-spacing: 3px;
+}
+
+.tagline {
+    font-size: 1.8em;
+    color: #32CD32;
+    margin: 20px 0 10px;
+    font-weight: 600;
 }
 
 .subtitle {
@@ -137,111 +191,31 @@ section h2 {
     margin-right: auto;
 }
 
-/* Services Section */
-.service-grid {
+/* Stats Section */
+.stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
 
-.service-card {
-    background: rgba(16, 16, 30, 0.8);
-    border: 1px solid rgba(50, 205, 50, 0.3);
-    border-radius: 15px;
-    padding: 30px;
-    transition: all 0.3s ease;
+.stat-item {
     text-align: center;
+    padding: 30px;
+    background: rgba(50, 205, 50, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(50, 205, 50, 0.3);
 }
 
-.service-card:hover {
-    transform: translateY(-5px);
-    border-color: #32CD32;
-    box-shadow: 0 8px 30px rgba(50, 205, 50, 0.3);
-}
-
-.service-card.featured {
-    border: 2px solid #32CD32;
-    background: linear-gradient(135deg, rgba(50, 205, 50, 0.1), rgba(50, 205, 50, 0.05));
-}
-
-.service-icon {
-    font-size: 3.5em;
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
+.stat-item h3 {
+    font-size: 3em;
     color: #32CD32;
-    font-size: 1.5em;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.service-card p {
-    color: #b0b0b0;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.service-link {
-    display: inline-block;
-    color: #32CD32;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 10px;
-    transition: all 0.2s;
-}
-
-.service-link:hover {
-    color: #7FFF00;
-    transform: translateX(5px);
-}
-
-/* Featured Project */
-.featured-project {
-    background: linear-gradient(135deg, rgba(50, 205, 50, 0.15), rgba(50, 205, 50, 0.05));
-    border: 2px solid rgba(50, 205, 50, 0.4);
-}
-
-.project-showcase {
-    margin-top: 30px;
-}
-
-.project-content h3 {
-    color: #32CD32;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.project-content > p {
-    color: #e0e0e0;
+.stat-item p {
+    color: #f4f4f4;
     font-size: 1.2em;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-.feature-highlights {
-    list-style: none;
-    padding: 0;
-    margin: 30px 0;
-}
-
-.feature-highlights li {
-    color: #b0b0b0;
-    font-size: 1.1em;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(50, 205, 50, 0.2);
-}
-
-.feature-highlights li:last-child {
-    border-bottom: none;
-}
-
-.project-actions {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 /* Feature Grid */
@@ -507,6 +481,11 @@ section h2 {
     margin: 10px 0;
 }
 
+.footer-note {
+    font-size: 0.9em;
+    color: #808080;
+}
+
 .footer-links {
     margin-top: 15px;
     font-size: 0.9em;
@@ -526,6 +505,15 @@ section h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .main-nav .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
     .hero h1 {
         font-size: 2.5em;
     }
